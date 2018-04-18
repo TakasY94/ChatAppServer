@@ -4,7 +4,8 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class Config {
-    private static final String PROPERTIES_FILE = "./server.properties";
+    //Работает только с полным
+    private static final String PROPERTIES_FILE = "C:\\Users\\User\\IdeaProjects\\ChatAppServer\\src\\main\\java\\server.properties";
 
     public static int PORT;
     public static int HISTORY_LENGTH;

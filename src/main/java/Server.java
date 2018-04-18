@@ -3,9 +3,10 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.SocketException;
 
-public class Main {
+public class Server {
 
-        static String message = "";
+        private static UsersList list = new UsersList();
+        private static ChatHistory chatHistory = new ChatHistory();
 
         public static void main(String[] args) {
             try {
@@ -25,5 +26,13 @@ public class Main {
                 System.out.println("I/O exception");
                 e.printStackTrace();
             }
+        }
+
+        public synchronized static UsersList getUserList() {
+            return list;
+        }
+
+        public synchronized static ChatHistory getChatHistory() {
+            return chatHistory;
         }
     }
